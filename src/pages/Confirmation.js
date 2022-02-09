@@ -3,7 +3,7 @@ import { Container, Grid, List, ListItem, ListItemText, Button } from '@material
 
 const Confirmation = ({ prevStep, nextStep, values }) => {
   console.log(values);
-  const { firstName, lastName, email, username, country, index, street, punkt } = values
+  const { firstName, lastName,  username, country, index, street, punkt } = values
   const Continue = e => {
     e.preventDefault();
     nextStep();
@@ -19,28 +19,25 @@ const Confirmation = ({ prevStep, nextStep, values }) => {
       <div>
         <List>
           <ListItem>
-            <ListItemText primary="Дом" secondary={email}/>
-          </ListItem>
-          <ListItem>
-            <ListItemText primary="Корпус строения" secondary={username}/>
+            <ListItemText primary="дом" secondary={username}/>
           </ListItem>
           <ListItem>
             <ListItemText primary="Населенный пункт" secondary={firstName}/>
           </ListItem>
           <ListItem>
-            <ListItemText primary="Улица" secondary={lastName}/>
+            <ListItemText primary="квартира" secondary={lastName}/>
           </ListItem>
           <ListItem>
             <ListItemText primary="Адрес" secondary={country}/>
           </ListItem>
           <ListItem>
-            <ListItemText primary="Почтовый индекс" secondary={street}/>
+            <ListItemText primary="улица" secondary={street}/>
           </ListItem>
           <ListItem>
             <ListItemText primary="Корпус строения" secondary={punkt}/>
           </ListItem>
           <ListItem>
-            <ListItemText primary="Квартира" secondary={index}/>
+            <ListItemText primary="Почтовый индекс" secondary={index}/>
           </ListItem>
         </List>
 

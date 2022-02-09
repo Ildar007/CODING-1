@@ -9,6 +9,10 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
     nextStep();
   }
   
+  const Previous = e => {
+    e.preventDefault();
+    prevStep();
+  }
 
  
 
@@ -54,35 +58,45 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
               <TextField 
                 placeholder="Дом"
                 label="Дом"
-                onChange={handleChange('дом')}
-                defaultValue={values.email}
+                onChange={handleChange('username')}
+                defaultValue={values.username}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Почтовый индекс"
-                onChange={handleChange('lastName')}
-                defaultValue={values.lastName}
+                onChange={handleChange('index')}
+                defaultValue={values.index}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Квартира"
-                onChange={handleChange('lastName')}
-                defaultValue={values.lastName}
+                onChange={handleChange('punkt')}
+                defaultValue={values.punkt}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Улица"
-                onChange={handleChange('lastName')}
-                defaultValue={values.lastName}
+                onChange={handleChange('street')}
+                defaultValue={values.street}
               />
             </Grid>
-           
+            <Grid item xs={12} sm={6}>
+              <Button 
+                onClick={ Previous }
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+              >
+                назад
+              </Button>
+            </Grid>
             <Grid item xs={12} sm={6}>
               <Button 
                 onClick={ Continue }
@@ -91,7 +105,7 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
                 variant="contained"
                 color="primary"
               >
-                Next
+                далее
               </Button>
             </Grid>
           </Grid>

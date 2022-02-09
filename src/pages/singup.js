@@ -4,13 +4,14 @@ import Confirmation from './Confirmation'
 import Success from './Succes'
 
 
+
 export default class Signup extends Component {
 
   state = {
     step: 1,
-    email: '',
+    
     username: '', 
-    password: '',
+    password: '', 
     firstName: '',
     lastName: '',
     country: '',
@@ -38,8 +39,8 @@ export default class Signup extends Component {
 
   render() {
     const { step } = this.state;
-    const { email, username, password, firstName, lastName, country, index,  street, punkt } = this.state;
-    const values = { email, username, password, firstName, lastName, country, index, street, punkt }
+    const {  username, password, firstName, lastName, country, index,  street, punkt } = this.state;
+    const values = {  username, password, firstName, lastName, country, index, street, punkt }
     
     switch(step) {
       case 1: 
