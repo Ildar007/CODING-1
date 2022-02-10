@@ -9,10 +9,10 @@ export default class Signup extends Component {
 
   state = {
     step: 1,
-    
+    firstName: '',
     username: '', 
     password: '', 
-    firstName: '',
+   
     lastName: '',
     country: '',
     index: '',

@@ -2,7 +2,11 @@ import React from 'react'
 import { Container,  Grid, TextField, Button } from '@material-ui/core'
 import GoogleMaps from './suggestion';
 
-const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
+
+
+
+
+const PersonalDetails = ({ prevStep, nextStep }) => {
   
   const Continue = e => {
     e.preventDefault();
@@ -14,9 +18,10 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
     prevStep();
   }
 
- 
+
 
   return (
+    
     <Container  component="main" maxWidth="xs">
       <div>
          
@@ -36,8 +41,8 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
               <TextField 
                 placeholder="Населенный пункт"
                 label="Населенный пункт"
-                onChange={handleChange('firstName')}
-                defaultValue={values.firstName}
+                 
+               
               />
             </Grid>
             {/* last name */}
@@ -45,8 +50,8 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
               <TextField 
                 placeholder="Улица"
                 label="Корпус строения"
-                onChange={handleChange('lastName')}
-                defaultValue={values.lastName}
+      
+             
               />
             </Grid>
 
@@ -58,32 +63,32 @@ const PersonalDetails = ({ prevStep, nextStep, handleChange, values }) => {
               <TextField 
                 placeholder="Дом"
                 label="Дом"
-                onChange={handleChange('username')}
-                defaultValue={values.username}
+           
+               
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Почтовый индекс"
-                onChange={handleChange('index')}
-                defaultValue={values.index}
+         
+                
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Квартира"
-                onChange={handleChange('punkt')}
-                defaultValue={values.punkt}
+           
+                
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField 
                 placeholder="Last Name"
                 label="Улица"
-                onChange={handleChange('street')}
-                defaultValue={values.street}
+             
+                
               />
             </Grid>
             <Grid item xs={12} sm={6}>
