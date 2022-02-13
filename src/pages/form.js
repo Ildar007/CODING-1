@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid,  Button,  Container,  Box } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as Yup from 'yup'
+import * as yup from 'yup'
 import GoogleMaps from './suggestion'
 
 const RegistrationForm = () => {
@@ -17,13 +17,13 @@ const RegistrationForm = () => {
         number: '',
         corpus:''
     }
-    const validationSchema = Yup.object().shape({
-        punkt: Yup.string().min(3, "It's too short").required("Required"),
-        house: Yup.string().min(3, "It's too short").required("Required"),
-        street: Yup.string().required("Required"),
-        number: Yup.number().typeError("Enter valid  number").required("Required"),
-        index:Yup.string().typeError("Enter valid Phone number").required("Required"),
-        corpus: Yup.number().typeError("Enter valid  number").required("Required"),
+    const validationSchema = yup.object().shape({
+        punkt: yup.string().min(3, "It's too short").required("Required"),
+        house: yup.string().min(3, "It's too short").required("Required"),
+        street: yup.string().required("Required"),
+        number: yup.number().typeError("Enter valid  number").required("Required"),
+        index:yup.string().typeError("Enter valid  number").required("Required"),
+        corpus: yup.number().typeError("Enter valid  number").required("Required"),
     })
     const onSubmit = (values, props) => {
 
