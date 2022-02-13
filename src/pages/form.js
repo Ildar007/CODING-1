@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid,  Button,  Container,  Box } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
-import * as yup from 'yup'
+
 import GoogleMaps from './suggestion'
 
 const RegistrationForm = () => {
@@ -17,14 +17,8 @@ const RegistrationForm = () => {
         number: '',
         corpus:''
     }
-    const validationSchema = yup.object().shape({
-        punkt: yup.string().required("Required"),
-        house: yup.string().required("Required"),
-        street: yup.string().required("Required"),
-        number: yup.number().typeError("Enter valid  number").required("Required"),
-        index:yup.string().typeError("Enter valid  number").required("Required"),
-        corpus: yup.number().typeError("Enter valid  number").required("Required"),
-    })
+
+  
     const onSubmit = (values, props) => {
 
         alert(JSON.stringify(values), null, 2)
@@ -34,11 +28,11 @@ const RegistrationForm = () => {
         <Box>
             <Container  component="main" maxWidth="xs">
                 
-                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+                <Formik initialValues={initialValues}  onSubmit={onSubmit}>
                     {(props) => (
                         <Form>
                           <Grid container spacing={4} justifyContent="space-evenly"  
-                          container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                          
  >
                             {/* <TextField label='Name' name="name" fullWidth value={props.values.name}
                     onChange={props.handleChange} /> */}
