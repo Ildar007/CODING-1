@@ -1,0 +1,58 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\yaild\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add formik-stepper
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\yaild\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\yaild\AppData\Local\Programs\Python\Python310\;C:\Python310\Scripts\;C:\Python310\;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\yaild\AppData\Local\Microsoft\WindowsApps;C:\Users\yaild\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\yaild\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  16.14.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\yaild\OneDrive\Рабочий стол\CODING-1\node_modules\msgpackr-extract\prebuilds\win32-x64\node.abi93.node'
+
+npm manifest: 
+  {
+    "name": "coding-1",
+    "version": "1.0.0",
+    "private": true,
+    "description": "CODING-1",
+    "keywords": [
+      "gatsby"
+    ],
+    "scripts": {
+      "develop": "gatsby develop",
+      "start": "gatsby develop",
+      "build": "gatsby build",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    },
+    "dependencies": {
+      "@emotion/react": "^11.7.1",
+      "@emotion/styled": "^11.6.0",
+      "@material-ui/core": "^4.12.3",
+      "@material-ui/icons": "^4.11.2",
+      "@mui/icons-material": "^5.3.1",
+      "@mui/material": "^5.4.0",
+      "autosuggest-highlight": "^3.2.0",
+      "dotenv": "^16.0.0",
+      "formik": "^2.2.9",
+      "gatsby": "^4.6.2",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-places-autocomplete": "^7.3.0",
+      "react-router-dom": "^6.2.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

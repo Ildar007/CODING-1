@@ -103,7 +103,7 @@ export default function GoogleMaps() {
         setInputValue(newInputValue);
       }}
       renderInput={(params) => (
-        <TextField {...params} label="Адресс обьекта" variant="standard"   fullWidth  />
+        <TextField {...params} label="Адресс обьекта" variant="outlined"   fullWidth  />
       )}
       renderOption={(props, option) => {
         const matches = option.structured_formatting.main_text_matched_substrings;
