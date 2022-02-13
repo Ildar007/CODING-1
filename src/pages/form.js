@@ -18,8 +18,8 @@ const RegistrationForm = () => {
         corpus:''
     }
     const validationSchema = yup.object().shape({
-        punkt: yup.string().min(3, "It's too short").required("Required"),
-        house: yup.string().min(3, "It's too short").required("Required"),
+        punkt: yup.string().required("Required"),
+        house: yup.string().required("Required"),
         street: yup.string().required("Required"),
         number: yup.number().typeError("Enter valid  number").required("Required"),
         index:yup.string().typeError("Enter valid  number").required("Required"),
@@ -75,7 +75,7 @@ const RegistrationForm = () => {
                                 helperText={<ErrorMessage name='street' />} required />
                                 </Grid>
                                 <Grid item xs={6} sm={6}>
-                            <Field as={TextField} name='corpus' label='Корпус строения' type='corpus' variant="outlined"
+                            <Field as={TextField} name='corpus' label='Корпус, Строения' type='corpus' variant="outlined"
                                 error={props.errors.corpus && props.touched.corpus}
                                 helperText={<ErrorMessage name='corpus' />} required />
                                 
