@@ -37,7 +37,8 @@ const RegistrationForm = () => {
                 <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                     {(props) => (
                         <Form>
-                          <Grid container spacing={2} justifyContent="space-evenly"
+                          <Grid container spacing={4} justifyContent="space-evenly"  
+                          container rowSpacing={4} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
  >
                             {/* <TextField label='Name' name="name" fullWidth value={props.values.name}
                     onChange={props.handleChange} /> */}
@@ -52,34 +53,34 @@ const RegistrationForm = () => {
 
                             {/* <TextField label='Email' name='email' type='Email' fullWidth 
                     {...props.getFieldProps('email')}/> */}
-                              <Grid item xs={12} sm={6}>
+                              <Grid item xs={6} sm={6}>
                             <Field as={TextField} name='house' label='Дом' variant="outlined" type='house'
                                 error={props.errors.house && props.touched.house}
                                 helperText={<ErrorMessage name='house' />} required />
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={6} sm={6}>
                             <Field as={TextField} name="index" label='Индекс' type='index' variant="outlined"
                                 error={props.errors.index && props.touched.index}
                                 helperText={<ErrorMessage name='index' />} required />
                                    </Grid>
-                                   <Grid item xs={12} sm={6}>
+                                   <Grid item xs={6} sm={6}>
                             <Field as={TextField} name='punkt' label='Населенный пункт' type='punkt' variant="outlined"
                                 error={props.errors.punkt && props.touched.punkt}
                                 helperText={<ErrorMessage name='punkt' />} required />
                                 
                                 </Grid>
-                                   <Grid item xs={12} sm={6}>
+                                   <Grid item xs={6} sm={6}>
                             <Field as={TextField} name='street' label='Улица' type='street' variant="outlined" 
                                 error={props.errors.street && props.touched.street}
                                 helperText={<ErrorMessage name='street' />} required />
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={6} sm={6}>
                             <Field as={TextField} name='corpus' label='Корпус строения' type='corpus' variant="outlined"
                                 error={props.errors.corpus && props.touched.corpus}
                                 helperText={<ErrorMessage name='corpus' />} required />
                                 
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
+                                <Grid item xs={6} sm={6}>
                             <Field as={TextField} name='number' label='Кварира' type='number' variant="outlined"
                                 error={props.errors.number && props.touched.number}
                                 helperText={<ErrorMessage name='number' />} required />
