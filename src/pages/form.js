@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid,  Button, Typography, Container, FormControl, Box } from '@material-ui/core'
+import { Grid,  Button,  Container,  Box } from '@material-ui/core'
 import { TextField } from '@material-ui/core'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
@@ -37,7 +37,8 @@ const RegistrationForm = () => {
                 <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                     {(props) => (
                         <Form>
-                          <Grid container spacing={2} >
+                          <Grid container spacing={2} justifyContent="space-evenly"
+ >
                             {/* <TextField label='Name' name="name" fullWidth value={props.values.name}
                     onChange={props.handleChange} /> */}
                     <Grid>
@@ -83,12 +84,13 @@ const RegistrationForm = () => {
                                 error={props.errors.number && props.touched.number}
                                 helperText={<ErrorMessage name='number' />} required />
                                 </Grid>
-                                <Grid item xs={12} sm={6}>
+                             
 
-                            <Button type='submit' style={btnStyle} variant='contained'
-                                color='primary'>Register</Button>
+                            
+                               
                                 </Grid>
-                                </Grid>
+                                <Button type='submit' style={btnStyle} variant='contained'
+                                color='primary'>Далее</Button>
                         </Form>
                     )}
                 </Formik>
