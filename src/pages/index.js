@@ -4,6 +4,7 @@ import * as React from "react";
 import RegistrationForm from "./form";
 
 import ButtonAppBar from './header'
+import GoogleMaps from "./suggestion";
 
 
 
@@ -11,7 +12,7 @@ import ButtonAppBar from './header'
 const pageStyles = {
   color: "#232129",
    margin: "5rem auto",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+   maxWidth: 220000,
 }
 const headingStyles = {
   marginTop: 40,
@@ -38,11 +39,14 @@ const IndexPage = () => {
           </h1>
         </Grid>
       
-     <Grid iteb xs={12} md={4}>
+     <Grid item xs={12} md={6}>
+     
+      
+                         
      <RegistrationForm/>
     
      </Grid>
-      
+    
       </Grid>
      
     </main>

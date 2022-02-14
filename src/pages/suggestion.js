@@ -87,13 +87,15 @@ export default function GoogleMaps() {
   return (
     <Autocomplete
       id="google-map-demo"
-      sx={{ width: 400 }}
+      sx={{ width: 580 }}
       getOptionLabel={(option) =>
         typeof option === 'string' ? option : option.description
       }
       filterOptions={(x) => x}
       options={options}
       freeSolo
+     
+      size="small"
       value={value}
       onChange={(event, newValue) => {
         setOptions(newValue ? [newValue, ...options] : options);
@@ -103,7 +105,7 @@ export default function GoogleMaps() {
         setInputValue(newInputValue);
       }}
       renderInput={(params) => (
-        <TextField {...params} label="Адресс обьекта" variant="outlined"   fullWidth  />
+        <TextField {...params} label="Адресс обьекта" variant="outlined"  InputLabelProps={{ shrink: true }}  fullWidth  />
       )}
       renderOption={(props, option) => {
         const matches = option.structured_formatting.main_text_matched_substrings;
