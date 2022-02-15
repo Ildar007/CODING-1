@@ -87,7 +87,7 @@ export default function GoogleMaps() {
   return (
     <Autocomplete
       id="google-map-demo"
-      sx={{ width: 580 }}
+      sx={{ width: 610 }}
       getOptionLabel={(option) =>
         typeof option === 'string' ? option : option.description
       }

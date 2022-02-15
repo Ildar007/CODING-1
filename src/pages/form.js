@@ -7,6 +7,8 @@ import GoogleMaps from './suggestion'
 
 
 
+
+
 const RegistrationForm = () => {
     
     const btnStyle = { marginTop: 30 }
@@ -74,11 +76,11 @@ const RegistrationForm = () => {
                             
                                
                                 </Grid>
-                                <Grid>
+                                
                                 <Button type='submit' style={btnStyle} variant='contained'
                                 color='primary'>Далее</Button>
-                                </Grid>
                         </Form>
+                        
                     )}
                 </Formik>
             </CardContent>
