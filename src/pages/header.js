@@ -10,9 +10,10 @@ import IconButton from '@mui/material/IconButton';
 
 
 
+
 export default function ButtonAppBar() {
     
-  
+ 
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -37,7 +38,8 @@ export default function ButtonAppBar() {
           </Typography>
           <Button
            type="submit"
-         
+           
+           to='/success' target='_blank'
            variant="contained"
            color="primary"
           > 

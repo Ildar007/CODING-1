@@ -1,7 +1,8 @@
 import {  Grid } from "@mui/material";
 import * as React from "react";
+import AutoComplete from "./avto";
 
-import RegistrationForm from "./form";
+
 
 import ButtonAppBar from './header'
 
@@ -42,12 +43,15 @@ const IndexPage = () => {
       
      <Grid item xs={12} md={6}>
      
-      
-                         
-     <RegistrationForm/>
-    
+      <AutoComplete
+    placesKey="AIzaSyAR8phEVD88GQDnNy8xYBX6PpZTz2r67aI"
+    inputId="address"
+    setAddress={(addressObject) => console.log(addressObject)}
+    required={true}
+    /> 
+
      </Grid>
-    
+     
       </Grid>
      
     </main>
